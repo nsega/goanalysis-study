@@ -8,9 +8,9 @@ import (
 	"golang.org/x/tools/go/analysis/passes/inspect"
 )
 
-const doc = "unexportedpkgfunc is to count unexported package functions"
+const doc = "unexportedpkgfunc is to count up unexported package functions"
 
-// Analyzer is to count unexported package functions
+// Analyzer is to count up unexported package functions
 var Analyzer = &analysis.Analyzer{
 	Name: "unexportedpkgfunc",
 	Doc:  doc,
