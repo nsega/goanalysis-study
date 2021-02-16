@@ -5,9 +5,15 @@ func f() {
 	var gopher int // want "pattern"
 	print(gopher)  // want "identifier is gopher"
 
-	ch := make(chan int)
+	ch := make(chan struct{})
 	close(ch)
+
+	ch = make(chan struct{})
 	close(ch)
+
+	ch = make(chan int)
+	close(ch)
+	close(ch) // want "NG"
 
 	ch2 := make(chan int)
 	close(ch2)
